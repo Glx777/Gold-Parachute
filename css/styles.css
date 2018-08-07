@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #222;
+}
+/* Создание оболочки */
+.wrapper {
+  height: 700px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+/* Центрирование элементов */
+.center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+/* Стартовый экран */
+#gameStart {
+  background: #f8f4f4;
+  border: 10px solid #532f2f;
+  height: 700px;
+  width: 1000px;
+}
+#gameStart label {
+  font-size: 18pt;
+  margin-top: 10px;
+}
+#gameStart input[type='text'] {
+  width: 250px;
+  padding: 5px;
+  font-size: 12pt;
+  border: 1px solid #222;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#gameStart input[type='button'] {
+  margin-top: 20px;
+}
+.btn {
+  background: #fff;
+  border: 3px solid #222;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 14pt;
+  cursor: pointer;
+}
+#gameStart h3 {
+  font-weight: normal;
+  font-size: 18pt;
+  margin-top: 20px;
+}
+#gameStart p {
+  font-size: 12pt;
+  display: block;
+  width: 350px;
+  margin-top: 10px;
+  border: 3px solid #222;
+  border-radius: 5px;
+  text-align: justify;
+  padding: 7px 12px;
+}
+/* Экран игрового поля */
+#gamePlay {
+  border: 5px solid #fff;
+  background: #222;
+  height: 700px;
+  width: 1000px;
+  overflow: hidden;
+}
+#playground {
+  height: 690px;
+  width: 760px;
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  float: left;
+  position: relative;
+  cursor: url('../img/parachute.png') 32 79, auto;
+  overflow: visible;
+}
+#gamePlay aside {
+  background: #0e1f33;
+  border-left: 5px solid #fff;
+  width: 230px;
+  float: left;
+  height: 690px;
+  color: #fff;
+  position: relative;
+}
+#gamePlay aside img {
+  position: absolute;
+  top: 10px;
+}
+#gamePlay aside p {
+  font-size: 16pt;
+  position: absolute;
+  left: 10px;
+}
+#gamePlay aside span {
+  color: #fff;
+  font-size: 16pt;
+}
+#gamePlay aside p:first-of-type {
+  top: 180px;
+}
+#gamePlay aside p:last-of-type {
+  top: 220px;
+}
+#gamePlay aside input[type='button'] {
+  background: #0e1f33;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 5px 12px;
+  color: #fff;
+  font-size: 16pt;
+  position: absolute;
+  bottom: 2%;
+  cursor: pointer;
+}
+#gamePlay #end {
+  background: #0e1f33;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 5px 12px;
+  color: #fff;
+  font-size: 16pt;
+  position: absolute;
+  bottom: 10%;
+  cursor: pointer;
+}
+/* Экран окончания игры */
+#gameEnd {
+  background: #f8f4f4;
+  height: 700px;
+  width: 1000px;
+  border: 10px solid #532f2f;
+}
+#gameEnd h3 {
+  font-size: 18pt;
+}
+#gameEnd table {
+  margin-top: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 14pt;
+  border: 2px solid #222;
+  border-radius: 5px;
+  padding: 10px;
+}
+#gameEnd table th {
+  font-size: 16pt;
+}
+#gameEnd input[type="button"] {
+  margin-top: 20px;
+}
+td.special {
+  font-size: 16pt;
+  color: blue;
+}
+.meteorite-small {
+  position: absolute;
+  background: url('../img/meteorite-small.png') no-repeat;
+  width: 90px;
+  height: 90px;
+  left: 100px;
+  top: -130px;
+  z-index: 98;
+  padding-bottom: 40px;
+  cursor: url('../img/parachute.png') 32 79, auto;
+}
+.meteorite-big {
+  position: absolute;
+  background: url('../img/meteorite-big.png') no-repeat;
+  width: 100px;
+  height: 85px;
+  left: 100px;
+  top: -130px;
+  z-index: 98;
+  padding-bottom: 40px;
+  cursor: url('../img/parachute.png') 32 79, auto;
+}
+.parachute-small {
+  position: absolute;
+  background: url('../img/parachute.png') no-repeat;
+  width: 80px;
+  height: 99px;
+  bottom: 50px;
+  left: 18px;
+  z-index: 99;
+  display: none;
+}
+.parachute-big {
+  position: absolute;
+  background: url('../img/parachute.png') no-repeat;
+  width: 80px;
+  height: 99px;
+  bottom: -100px;
+  left: 18px;
+  z-index: 99;
+  display: none;
+}

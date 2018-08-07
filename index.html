@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gold parashute</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="gameStart">
+        <div class="center">
+          <img src="img/logo.png" alt="Logo" width="150" height="150">
+          <label>Ваше имя:</label>
+          <input type="text" id="nameInput">
+          <input type="button" value="Старт игры" class="btn" id="startGame">
+          <h3>Инструкция:</h3>
+          <p>Для набора баллов необходимо прикрепить парашут к метеориту. Для паузы игры нажмите на кнопку «Пауза».Проигрыш игры возникает в результате соприкосновения метеорита с землей.</p>
+        </div>
+      </div>
+      <div id="gamePlay">
+        <div id="playground"></div>
+        <aside>
+          <div class="center">
+            <img src="img/logo.png" alt="Logo" width="130" height="130">
+          </div>
+          <p>Имя: <span id="name"></span></p>
+          <p id="scoreDIV">Счет: <span id="score"></span></p>
+          <div class="center">
+            <input type="button" id="pause_btn" value="Пауза">
+          </div>
+        </aside>
+      </div>
+      <div id="gameEnd">
+        <div class="center">
+          <img src="img/logo.png" alt="Logo" width="130" height="130">
+          <form id="myForm" action="php/add.php" method="post">
+            <input type="hidden" name="name" class="info" id="namePHP">
+            <input type="hidden" name="score" class="info" id="scorePHP">
+          </form>
+          <h3>Таблица результатов</h3>
+          <table id="Leaderboard"></table>
+          <input type="button" class="btn" value="Начать заново" id="startAgain">
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
